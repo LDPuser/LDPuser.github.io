@@ -1,0 +1,38 @@
+baseURL = "https://ldpuser.github.io/louis-david-piron.github.io/"
+languageCode = "en-us"
+title = "Louis-David Piron"
+theme = "PaperMod"
+paginate = 5
+
+  [params.profileMode]
+    enabled = true
+    title = "Louis-David Piron"
+    subtitle = "Machine learning for biology & health · Generative modelling · Causal inference"
+    imageUrl = "images/profile_pic.jpeg"
+    imageTitle = "Louis-David Piron"
+    imageWidth = 160
+    imageHeight = 160
+
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "about/"
+    [[params.profileMode.buttons]]
+      name = "Research"
+      url = "research/"
+    [[params.profileMode.buttons]]
+      name = "CV"
+      url = "cv.pdf"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 1
+  [[menu.main]]
+    name = "Research"
+    url = "research/"
+    weight = 2
+  [[menu.main]]
+    name = "CV"
+    url = "cv.pdf"
+    weight = 3

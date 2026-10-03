@@ -1,0 +1,13 @@
+{{- define "main" }}
+
+<article class="post-single">
+  {{- partial "banner.html" (dict "cover" .Params.cover "title" .Title "subtitle" .Description) }}
+
+  {{- if .Content }}
+  <div class="post-content md-content">
+    {{ .Content }}
+  </div>
+  {{- end }}
+</article>
+
+{{- end }}

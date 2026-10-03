@@ -1,0 +1,43 @@
+/* Research page: each "### " heading starts a project entry */
+.research-content h3 {
+  margin: 2.5rem 0 0.4rem;
+  padding: 2rem 0 0 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 1.3rem;
+  line-height: 1.35;
+  position: relative;
+}
+
+.research-content h3:first-child {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* accent bar beside each project title */
+.research-content h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  height: 1.1em;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--primary);
+  opacity: 0.6;
+}
+
+/* the italic line right under a title = affiliation · dates · advisors */
+.research-content h3 + p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.research-content h3 + p em {
+  font-style: normal;
+}
+
+.research-content h3 ~ p {
+  padding-left: 1rem;
+}

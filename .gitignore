@@ -1,0 +1,23 @@
+# Hugo build output / lock
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Python environment
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Work in progress, not part of the live site
+content/posts/
+content/sandbox/
+layouts/posts/
+static/images/sandbox/
+A_supporting_code/
+assets/tex/
+assets/refs.bib
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

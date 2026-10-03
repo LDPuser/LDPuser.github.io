@@ -1,0 +1,18 @@
+{{- define "main" }}
+
+<article class="post-single research-page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}
+    <div class="post-description">{{ . }}</div>
+    {{- end }}
+  </header>
+
+  {{- if .Content }}
+  <div class="post-content research-content">
+    {{ .Content }}
+  </div>
+  {{- end }}
+</article>
+
+{{- end }}

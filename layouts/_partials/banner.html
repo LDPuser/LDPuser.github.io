@@ -1,0 +1,26 @@
+{{- /* Painted header banner. Expects dict: "cover" (map with image/caption), "title", "subtitle" (optional). */ -}}
+{{- with .cover }}
+<div style="
+  width:100%;
+  height: 220px;
+  margin-bottom: 2.5rem;
+  border-radius: 4px;
+  background-image: url('{{ .image | absURL }}');
+  background-size: cover;
+  background-position: center 35%;
+  position: relative;
+">
+  <div style="position:absolute; inset:0; background: rgba(0,0,0,0.5); border-radius:4px;"></div>
+  <div style="position:absolute; inset:0; padding: 1.5rem 2rem 1rem 2rem; display:flex; flex-direction:column; justify-content:space-between;">
+    <div>
+      <h1 style="color:white; margin:0 0 0.3rem 0; font-size:1.8rem; font-weight:500;">{{ $.title }}</h1>
+      {{- with $.subtitle }}
+      <p style="color:rgba(255,255,255,0.65); margin:0; font-size:0.95rem;">{{ . }}</p>
+      {{- end }}
+    </div>
+    {{- with .caption }}
+    <p style="color:rgba(255,255,255,0.4); margin:0; font-size:0.75rem; font-style:italic; text-align:right;">{{ . | markdownify }}</p>
+    {{- end }}
+  </div>
+</div>
+{{- end }}
